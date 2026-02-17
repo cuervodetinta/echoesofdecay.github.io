@@ -1,1 +1,158 @@
+:root {
+    --primary: #6c63ff;
+    --dark: #1e1e2f;
+    --light: #f4f4f9;
+    --accent: #ff6584;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+header p.tagline {
+    font-size: 1.3rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* FEATURES */
+
+.features ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.features li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.features li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+/* GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* TRAILER */
+
+.trailer iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+/* DOWNLOAD BUTTON */
+
+.download {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.download a {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.download a:hover {
+    background-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+/* PROJECT INFO */
+
+section p {
+    margin-top: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #151522;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .trailer iframe {
+        height: 250px;
+    }
+}
 
