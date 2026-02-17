@@ -2,14 +2,9 @@
     --abyss: #0f0e0c;
     --stone-dark: #1a1815;
     --stone: #23201c;
-    --stone-light: #2d2923;
     --gold-dim: #9c7a3c;
-    --ember-dim: #b3471d;
-    --glow-soft: rgba(196, 150, 60, 0.25);
     --text-main: #d8d3c8;
 }
-
-/* GLOBAL RESET */
 
 * {
     margin: 0;
@@ -24,7 +19,7 @@ body {
     line-height: 1.5;
 }
 
-/* HEADER (ONLY TITLE BANNER) */
+/* HEADER ONLY CONTAINS TITLE + TAGLINE */
 
 header {
     text-align: center;
@@ -37,21 +32,19 @@ header h1 {
     font-size: 3rem;
     color: var(--gold-dim);
     letter-spacing: 3px;
-    text-shadow: 0 0 20px var(--glow-soft);
 }
 
 header .tagline {
     margin-top: 10px;
     font-style: italic;
     color: #a8966a;
-    font-size: 1.05rem;
 }
 
-/* PLAY SECTION (NOW SEPARATE FROM HEADER) */
+/* PLAY SECTION — COMPLETELY SEPARATE */
 
 .play-section {
     max-width: 1000px;
-    margin: 25px auto 10px auto;
+    margin: 30px auto;
     padding: 35px 20px;
     background-color: var(--stone-dark);
     border: 1px solid var(--gold-dim);
@@ -60,11 +53,8 @@ header .tagline {
 }
 
 .play-section h2 {
-    color: var(--gold-dim);
     margin-bottom: 15px;
-    border-bottom: 1px solid var(--gold-dim);
-    display: inline-block;
-    padding-bottom: 4px;
+    color: var(--gold-dim);
 }
 
 .game-placeholder {
@@ -74,124 +64,16 @@ header .tagline {
     border-radius: 6px;
 }
 
-/* GENERAL SECTIONS */
-
 section {
-    padding: 35px 20px;
+    padding: 30px 20px;
     max-width: 1000px;
-    margin: 8px auto;
+    margin: 10px auto;
 }
-
-h2 {
-    margin-bottom: 12px;
-    color: var(--gold-dim);
-    border-bottom: 1px solid var(--gold-dim);
-    display: inline-block;
-    padding-bottom: 4px;
-}
-
-.description {
-    font-size: 0.98rem;
-    margin-top: 8px;
-}
-
-/* FEATURES */
-
-.features ul {
-    list-style: none;
-    margin-top: 10px;
-}
-
-.features li {
-    margin-bottom: 6px;
-    padding-left: 16px;
-    position: relative;
-}
-
-.features li::before {
-    content: "◆";
-    position: absolute;
-    left: 0;
-    color: var(--ember-dim);
-}
-
-/* GALLERY */
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px;
-}
-
-.gallery img {
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid #6f5a2c;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 15px var(--glow-soft);
-}
-
-/* TRAILER */
-
-.trailer iframe {
-    width: 100%;
-    height: 420px;
-    border-radius: 6px;
-    border: 1px solid #6f5a2c;
-}
-
-/* DOWNLOAD BUTTON */
-
-.download {
-    text-align: center;
-    margin-top: 12px;
-}
-
-.download a {
-    text-decoration: none;
-    background: linear-gradient(135deg, var(--gold-dim), var(--ember-dim));
-    color: #141210;
-    padding: 10px 26px;
-    border-radius: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-
-.download a:hover {
-    box-shadow: 0 0 15px var(--glow-soft);
-    transform: translateY(-2px);
-}
-
-/* FOOTER */
 
 footer {
     text-align: center;
     padding: 18px;
     background-color: #0c0b09;
     border-top: 1px solid var(--gold-dim);
-    font-size: 0.8rem;
-    opacity: 0.7;
-    margin-top: 20px;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-
-    header h1 {
-        font-size: 2.2rem;
-    }
-
-    .trailer iframe {
-        height: 250px;
-    }
-
-    .game-placeholder {
-        height: 260px;
-    }
+    margin-top: 30px;
 }
