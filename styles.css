@@ -77,3 +77,16 @@ footer {
     border-top: 1px solid var(--gold-dim);
     margin-top: 30px;
 }
+
+.game-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.game-container iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 6px;
+    border: 1px solid #6f5a2c;
+}
