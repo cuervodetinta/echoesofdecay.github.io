@@ -1,158 +1,199 @@
 :root {
-    --primary: #6c63ff;
-    --dark: #1e1e2f;
-    --light: #f4f4f9;
-    --accent: #ff6584;
+    --stone-dark: #1b1a17;
+    --stone: #2e2b26;
+    --sand: #a68b5b;
+    --gold: #c6a75e;
+    --ember: #e25822;
+    --glow: #ffb347;
+    --text-light: #e6e1d9;
 }
+
+/* GLOBAL RESET */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: var(--dark);
-    color: var(--light);
-    line-height: 1.6;
+    background: linear-gradient(to bottom, #141310, #1f1d19);
+    color: var(--text-light);
+    line-height: 1.5;
 }
 
 /* HEADER */
 
 header {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
+    padding: 45px 20px;
+    background: radial-gradient(circle at center, #3a342c, #1b1a17);
+    border-bottom: 2px solid var(--gold);
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(255, 179, 71, 0.4);
+}
+
+header .tagline {
+    margin-top: 8px;
+    font-style: italic;
+    color: var(--sand);
+    font-size: 1.1rem;
+}
+
+/* PLAY SECTION (NEW) */
+
+.play-section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: var(--stone);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.play-section h2 {
+    color: var(--gold);
     margin-bottom: 15px;
 }
 
-header p.tagline {
-    font-size: 1.3rem;
-    font-style: italic;
-    opacity: 0.9;
+.game-placeholder {
+    height: 400px;
+    background: linear-gradient(145deg, #2a2722, #1a1916);
+    border: 2px dashed var(--sand);
+    border-radius: 8px;
 }
 
-/* SECTIONS */
+/* GENERAL SECTIONS */
 
 section {
-    padding: 60px 20px;
+    padding: 40px 20px;
     max-width: 1000px;
-    margin: auto;
+    margin: 10px auto;
 }
 
 h2 {
-    margin-bottom: 20px;
-    color: var(--primary);
-    border-bottom: 2px solid var(--primary);
+    margin-bottom: 15px;
+    color: var(--gold);
+    border-bottom: 1px solid var(--gold);
     display: inline-block;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
 }
 
 .description {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
 /* FEATURES */
 
 .features ul {
     list-style: none;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .features li {
-    margin-bottom: 10px;
-    padding-left: 20px;
+    margin-bottom: 8px;
+    padding-left: 18px;
     position: relative;
 }
 
 .features li::before {
-    content: "▹";
+    content: "◆";
     position: absolute;
     left: 0;
-    color: var(--accent);
+    color: var(--ember);
 }
 
 /* GALLERY */
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
 }
 
 .gallery img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--gold);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transform: scale(1.04);
+    box-shadow: 0 0 20px rgba(255, 179, 71, 0.3);
 }
 
 /* TRAILER */
 
 .trailer iframe {
     width: 100%;
-    height: 500px;
-    border-radius: 10px;
+    height: 450px;
+    border-radius: 8px;
+    border: 1px solid var(--gold);
 }
 
 /* DOWNLOAD BUTTON */
 
 .download {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .download a {
     text-decoration: none;
-    background-color: var(--primary);
-    color: white;
-    padding: 15px 30px;
-    border-radius: 30px;
+    background: linear-gradient(135deg, var(--gold), var(--ember));
+    color: #1b1a17;
+    padding: 12px 28px;
+    border-radius: 25px;
     font-weight: bold;
-    transition: background 0.3s ease, transform 0.2s ease;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
 .download a:hover {
-    background-color: var(--accent);
-    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255, 179, 71, 0.6);
+    transform: translateY(-2px);
 }
 
 /* PROJECT INFO */
 
 section p {
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 /* FOOTER */
 
 footer {
     text-align: center;
-    padding: 30px 20px;
-    background-color: #151522;
-    margin-top: 40px;
-    font-size: 0.9rem;
+    padding: 20px;
+    background-color: #141310;
+    border-top: 1px solid var(--gold);
+    font-size: 0.85rem;
     opacity: 0.8;
+    margin-top: 20px;
 }
 
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
+
     header h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .trailer iframe {
         height: 250px;
     }
-}
 
+    .game-placeholder {
+        height: 250px;
+    }
+}
