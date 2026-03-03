@@ -90,3 +90,54 @@ footer {
     border-radius: 6px;
     border: 1px solid #6f5a2c;
 }
+
+/* SCREENSHOTS HORIZONTAL SCROLLER */
+
+.screenshots-section {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px 20px;
+}
+
+.screenshots-section h2 {
+    margin-bottom: 15px;
+    color: var(--gold-dim);
+    border-bottom: 1px solid var(--gold-dim);
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.screenshots-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar styling (subtle dark theme) */
+.screenshots-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.screenshots-scroll::-webkit-scrollbar-track {
+    background: var(--stone-dark);
+}
+
+.screenshots-scroll::-webkit-scrollbar-thumb {
+    background: var(--gold-dim);
+    border-radius: 4px;
+}
+
+.screenshots-scroll img {
+    height: 250px;
+    border-radius: 6px;
+    border: 1px solid #6f5a2c;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshots-scroll img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(156, 122, 60, 0.4);
+}
